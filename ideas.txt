@@ -1,0 +1,37 @@
+Assumptions/thoughts: Multiple Travelling Salesman Problem
+
+The prime goal in solving this problem is to find the most cost-efficient solution.
+
+-Each Driver costs 500, and the maximum they can ride is 12*60=720 Minute
+so try to utilize each driver's capacity by assigning multiple loads 
+(Maybe if we find the best utilization, we don't need to calculate the cost as it's not required to print)
+
+-May be possible ways to solve this problem is 
+
+1)Brute force way- start finding the best-optimized route among the problem file (but stuck  as It won't account for multiple Drivers)
+It will be so complex for 200 combinations(! efficient) that it can be applied to multiple levels of optimizations, but it still feels incomplete. 
+
+2) We can classify/cluster the problems based on the nearest neighbor (cons: what if delivery shares clusters?), and if the city provided with problems is a good idea. Not sure!
+
+3) What if we use a 2d Array to store adjacency metrics (means from  distance to one load to another load -all possible continuation loads)
+
+4)what other DS can be used to make this better? Graph/map? it looks like a graph with weight might be the solution but.....not sure
+map can be 
+
+5)after applying 
+
+:::Steps To Perform:::
+--Read the File (skip header) and create a Load structure
+also, add a field for distance and isTaken/assign/delivered
+--find savings 
+--sort descending based on saving 
+--Clarke and Wright’s Savings Algorithm perform steps
+--optimize
+--print in desired format
+
+Reference:
+saving algorithm
+https://www.tandfonline.com/doi/full/10.1080/21642583.2019.1674220
+https://aswani.ieor.berkeley.edu/teaching/FA15/151/lecture_notes/ieor151_lec18.pdf
+Section 6-4-12
+A Heuristic Approach Based on Clarke-Wright Algorithm for Open Vehicle Routing Problem
